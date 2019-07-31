@@ -6234,16 +6234,3 @@
 114|4|Dari kejahatan (bisikan) syaitan yang biasa bersembunyi,
 114|5|yang membisikkan (kejahatan) ke dalam dada manusia,
 114|6|dari (golongan) jin dan manusia.
-
-
-#=====================================================================
-#
-#  Quran Translation
-#  Name: Bahasa Indonesia
-#  Translator: Indonesian Ministry of Religious Affairs
-#  Language: Indonesian
-#  ID: id.indonesian
-#  Last Update: June 4, 2010
-#  Source: Tanzil.net
-#
-#=====================================================================
