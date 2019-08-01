@@ -2,12 +2,11 @@ import flask
 from flask import request, jsonify
 from flask_cors import CORS
 
+from gensim.models.wrappers import FastText
+# from gensim.models import KeyedVectors
 
-# from gensim.models.wrappers import FastText
-from gensim.models import KeyedVectors
-
-# model = FastText.load_fasttext_format('id.bin')
-model = KeyedVectors.load_word2vec_format('id.vec')
+model = FastText.load_fasttext_format('id.bin')
+# model = KeyedVectors.load_word2vec_format('id.vec')
 
 app = flask.Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
