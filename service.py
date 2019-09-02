@@ -35,15 +35,8 @@ def get_similar():
 
     for i, j in similar:
         if count<10:
-            for line in open('quran.txt'):
-                if i in line:
-                    outcome.append(line.strip())
-
-            if outcome:
-                count+=1
-                result.append(i)
-
-            outcome.clear()
+            count+=1
+            result.append(i)
 
     for i in result:
         response.append({'value':i})
