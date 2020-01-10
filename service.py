@@ -1,6 +1,7 @@
 import flask
 from flask import request, jsonify
 from flask_cors import CORS
+import re
 
 from gensim.models.wrappers import FastText
 # from gensim.models import KeyedVectors
@@ -36,7 +37,9 @@ def get_similar():
     for i, j in similar:
         if count<10:
             for line in open('quran.txt'):
-                if i in line:
+                origin = i.lower()
+                destination = line.lower()
+                if origin in destination:
                     outcome.append(line.strip())
 
             if outcome:
