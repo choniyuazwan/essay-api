@@ -37,10 +37,11 @@ def get_similar():
     for i, j in similar:
         if count<10:
             for line in open('quran.txt'):
-                origin = i.lower()
-                destination = line.lower()
-                if origin in destination:
-                    outcome.append(line.strip())
+                my_regex = r'\b' + i + r'\b'
+                for word in line.split():
+                    if re.match(my_regex, word, re.IGNORECASE):
+                        outcome.append(line.strip())
+                        break
 
             if outcome:
                 count+=1
@@ -60,8 +61,11 @@ def get_translation():
     similar = []
     key = request.args.get('key')
     for line in open('quran.txt'):
-        if key in line:
-            result.append(line.strip())
+        my_regex = r'\b' + key + r'\b'
+        for word in line.split():
+            if re.match(my_regex, word, re.IGNORECASE):
+                result.append(line.strip())
+                break
 
     if result:
         for item in result:
