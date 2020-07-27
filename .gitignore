@@ -1,2 +1,5 @@
+.DS_Store
+~*
 id*
-.ipynb_checkpoints
+.ipynb_checkpoints/
+.idea/
