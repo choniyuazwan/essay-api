@@ -1,3 +1,6 @@
 id*
 .ipynb_checkpoints
 .DS_Store
+.idea
+*.iml
+env

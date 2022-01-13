@@ -26,11 +26,10 @@ def home():
 @app.route('/similar', methods=['GET'])
 def get_similar():
     key = request.args.get('key')
-    similar =  model.similar_by_word(key, 100)
+    similar = model.similar_by_word(key.lower(), 100)
 
     response = []
     result = []
-    outcome = []
     count = 0
 
     for i, j in similar:
@@ -47,10 +46,9 @@ def get_similar():
 def get_translation():
     result = []
     response = []
-    similar = []
     key = request.args.get('key')
     for line in open('quran.txt'):
-        if key in line:
+        if key.lower() in line:
             result.append(line.strip())
 
     if result:
